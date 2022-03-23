@@ -1,16 +1,37 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+"""
+"""
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    print("""
+    ----------------------------------------------------------
+    Welcome to lucky unicorn
+    ----------------------------------------------------------
+    """)
+    start = input("Write enter if you want to play: ").lower()
+    if start == 'enter':
+        start_game()
+    else:
+        print("Goodbye")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def start_game():
+    money_for_game = []
+    money_for_game = int(input("How much do you want to spend between 1 and 10: "))
+    while money_for_game >= 1:
+        quit_chance = input("Do you want to continue?(Y/N): ").upper()
+        if quit_chance == 'Y':
+            chance_part(money_for_game)
+        elif quit_chance == 'N':
+            money_for_game.remove
+            print(f"You have {money_for_game} left in the game")
+        else:
+            print("That is not an answer")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+def chance_part(money_for_game):
+    return
+
+
+
+main()
